@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1 class='text-center mt-5'>Thumbnail Downloader</h1>
+
+    <form method='POST'>
+        {% csrf_token %}
+        
+        
+        <div class="form-group">
+            <label for="text">ENter URL</label>
+            <input type="text" class="form-control" id="urls" name='urls' placeholder='Enter Video url'>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-center">Submit</button>
+        </div>
+    </form>
+
+    {% if thumb_url %}
+    <div class="mt-5 text-center">
+        <img src="{{thumb_url}}" class="img-fluid" alt="{{thumb_title}}">
+        <p class="mt-3">{{downText}} &#128512;</p> 
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+{% endblock content %}

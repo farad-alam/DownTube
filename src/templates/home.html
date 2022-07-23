@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center pt-5">
+        <h1 class="fw-bolder">Welcome to DownTube</h1>
+        <p class="lead">Download High Resulation YouTube Videos & Thumbnail With-in a Second</p>
+        <a class="btn btn-lg btn-success mt-5 mb-5" href="{% url 'singleDown' %}">Video Downloader</a>
+        <a class="btn btn-lg btn-success mt-5 mb-5" href="{% url 'thumbDown' %}">Thumbnail Downloader</a>
+    </div>
+</div>
+{% endblock content %}
